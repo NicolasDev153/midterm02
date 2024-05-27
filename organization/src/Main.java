@@ -12,5 +12,15 @@ public class Main {
         org.removeDonor(donor1); // Removes first donor from the list
 
         org.restoreState(); // Restores the state from state.csv
+
+        System.out.println(donor1.getDonation());
+        System.out.println(donor2.getName());
+
+        System.out.println(donor1.getName());
+        donor1.setName("Nikoloz C");
+        System.out.println(donor1.getName());
+
+        donor2.setDonation(87.0);
+        System.out.println(donor2.getDonation());
     }
 }

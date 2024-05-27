@@ -20,8 +20,10 @@ public class NonProfitOrg {
     public void saveState() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("state.csv"))) {
             for (Donor donor : donors) {
-                writer.println(donor.getName() + "," + donor.getDonation());
+                writer.println(donor.getName() + ", " + donor.getDonation());
             }
+            System.out.println("Saved state:");
+            printState();
         } catch (IOException e) {
             System.out.println("Error saving state: " + e.getMessage());
         }
@@ -38,8 +40,16 @@ public class NonProfitOrg {
                 Donor donor = new Donor(name, donation);
                 donors.add(donor);
             }
+            System.out.println("Restored state:");
+            printState();
         } catch (IOException e) {
             System.out.println("Error restoring state: " + e.getMessage());
+        }
+    }
+
+    private void printState() {
+        for (Donor donor : donors) {
+            System.out.println("Donor: " + donor.getName() + ", Donation: " + donor.getDonation());
         }
     }
 }

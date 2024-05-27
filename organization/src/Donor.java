@@ -15,13 +15,11 @@ public class Donor {
         this.name = name;
     }
 
-//    public void setAmount(int amount) {
-//        this.amount = amount;
-//    }
-
     public double getDonation() {
         return donation;
     }
 
-
+    public void setDonation(double donation){
+        this.donation = donation;
+    }
 }
