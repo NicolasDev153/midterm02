@@ -22,4 +22,5 @@ public class Donor {
     public void setDonation(double donation){
         this.donation = donation;
     }
+
 }

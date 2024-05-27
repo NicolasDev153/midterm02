@@ -47,6 +47,7 @@ public class NonProfitOrg {
         }
     }
 
+
     private void printState() {
         for (Donor donor : donors) {
             System.out.println("Donor: " + donor.getName() + ", Donation: " + donor.getDonation());
